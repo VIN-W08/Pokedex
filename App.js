@@ -60,6 +60,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden={true}/>
       <View style={styles.listContainer}>
         <FlatList
         data={pokemons}
@@ -71,7 +72,6 @@ export default function App() {
             </TouchableOpacity>
           )}
         keyExtractor={(item) => item.id.toString()}/>
-        <StatusBar style="auto" />
       </View>      
       <DetailCard style={styles.detailCard}>{selectedPokemon}</DetailCard>
     </View>
